@@ -1,2 +1,4 @@
 # FE_examples
-本文件夹记录了前端学习的简单案例，包括一部分《HTML5 与 CSS3 基础教程》中的一些案例，以及部分其他的案例。
+[demo]
+flexbox: https://jhchen07.github.io/FE_examples/flexbox.html
+左侧固定，右侧自适应的两栏布局: https://jhchen07.github.io/FE_examples/leftfixed_rightresponsive.html

@@ -93,21 +93,24 @@ body {
 /*未实现等高*/
 /*flex scheme
 要求浏览器版本足够高，
-其次两个盒子align-items具有默认值stretch,因此会等高
+其次两个盒子align-items具有默认值stretch,因此会等高*/
 .wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
 }
 .wrapper .left {
     flex: 0 0 auto;
 }
 .wrapper .right {
     flex: 1 1 auto;
-}*/
+}
 
 
-/*grid scheme*/
-.wrapper{
+/*grid scheme
+grid布局也有列等高的默认效果。需要设置: align-items: start;。
+grid布局还有一个值得注意的小地方和flex不同：在使用margin-left的时候，
+grid布局默认是box-sizing设置的盒宽度之间的位置。而flex则是使用两个div的border或者padding外侧之间的距离。
+.wrapper {
     display: grid;
     grid-template-columns: 120px 1fr;
     align-items: start;
@@ -124,4 +127,4 @@ body {
 
 .wrapper.right {
     grid-column: 2;
-}
+}*/
