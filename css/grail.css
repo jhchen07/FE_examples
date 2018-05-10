@@ -1,0 +1,28 @@
+/*如果设置border，若没有生命box-sizing达不到效果*/
+
+body {
+    padding: 0 220px 0 200px;
+}
+.sub,
+.main,
+.extra {
+    position: relative;
+    float: left;
+    min-height: 130px;
+}
+.main {
+    width: 100%;
+    background-color: aqua;
+}
+.sub {
+    left:-200px;
+    width: 200px;
+    margin-left: -100%;
+    background-color: aquamarine;
+}
+.extra {
+    width: 220px;
+    right: -220px;
+    margin-left: -220px;
+    background-color: blueviolet;
+}
