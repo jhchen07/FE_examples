@@ -1,5 +1,5 @@
 /*如果设置border，若没有生命box-sizing达不到效果*/
-
+/*这里可以设置包括三者的外围容器*/
 body {
     padding: 0 220px 0 200px;
 }
