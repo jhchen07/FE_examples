@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .button {
+            width: 55px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table align="center">
+        <tr>
+            <td></td>
+            <td>购物简易计算器</td>
+        </tr>
+        <tr>
+            <td>第一个数</td>
+            <td>
+                <input type="text" id="oneNum" />
+            </td>
+        </tr>
+        <tr>
+            <td>第二个数</td>
+            <td>
+                <input type="text" id="twoNum" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input onclick="add()" type="button" id="add" value="+" class="button" />
+                <input onclick="sub()" type="button" id="sub" value="-" class="button" />
+                <input onclick="mul()" type="button" id="mul" value="*" class="button" />
+                <input onclick="divide()" type="button" id="divide" value="/" class="button" /> </td>
+        </tr>
+        <tr>
+            <td>计算结果</td>
+            <td>
+                <input type="text" id="result" />
+            </td>
+        </tr>
+    </table>
+</body>
+<script> 
+    var num_1 = document.getElementById("oneNum");
+    var num_2 = document.getElementById("twoNum");
+    var result = document.getElementById("result");
+    function add() { result.value = parseFloat(num_1.value) + parseFloat(num_2.value); }
+    function sub() { result.value = parseFloat(num_1.value) - parseFloat(num_2.value); }
+    function mul() { result.value = parseFloat(num_1.value) * parseFloat(num_2.value); }
+    function divide() { result.value = parseFloat(num_1.value) / parseFloat(num_2.value); } 
+</script>
+
+</html>
