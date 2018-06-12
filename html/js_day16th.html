@@ -15,30 +15,33 @@
     <button id="divide-btn">除</button>
     <p id="result">运算结果</p>
     <script>
-        var first_number = 0;
-        var second_number = 0;
-        var result = 0;
-        first_number = Number(document.getElementById("first-number").getAttribute("value"));
-        second_number = Number(document.getElementById("second-number").getAttribute("value"));
-        document.getElementById("add-btn").onclick = function add() {
-            result = first_number + second_number;
-            document.getElementById("result").innerHTML = "运算结果 " + result;
+        var first_number;
+        var second_number;
+        //如果直接获取document节点的value就不能成功
+        first_number = document.getElementById("first-number");
+        second_number = document.getElementById("second-number");
+        document.getElementById("add-btn").onclick = function () {
+            document.getElementById("result").innerHTML = "运算结果 " 
+            + Number(parseFloat(first_number.value) + parseFloat(second_number.value));
         }
-        document.getElementById("minus-btn").onclick = function minus() {
-            result = first_number - second_number;
+        document.getElementById("minus-btn").onclick = function () {
+            document.getElementById("result").innerHTML = "运算结果 " 
+            + Number(parseFloat(first_number.value) - parseFloat(second_number.value));
         }
-        document.getElementById("times-btn").onclick = function times() {
-            result = first_number * second_number;
+        document.getElementById("times-btn").onclick = function () {
+            document.getElementById("result").innerHTML = "运算结果 " 
+            + Number(parseFloat(first_number.value) * parseFloat(second_number.value));
         }
-        document.getElementById("divide-btn").onclick = function divide() {
-            if (second_number === 0) {
+        document.getElementById("divide-btn").onclick = function () {
+            if (second_number.value == 0) {
                 alert("Please enter a legal divisor!");
             }
             else {
-                result = first_number / second_number;
+                document.getElementById("result").innerHTML = "运算结果 " 
+            + Number(parseFloat(first_number.value) / parseFloat(second_number.value));
             }
         }
-        document.getElementById("result").innerHTML = "运算结果 " + result;
+
     </script>
 </body>
 
