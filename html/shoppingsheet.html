@@ -29,13 +29,31 @@
 </ul>
 
 <script>
-    var list = document.getElementsByTagName("ul");
-    var input = document.getElementsByTagName("input");
-    var btn = document.getElementsByTagName("button");
+    var list = document.querySelector("ul")
+    var input = document.querySelector("input");
+    var btn = document.querySelector("button");
     btn.onclick = function add(){
         var item = input.value;
-        input.setAttribute("value", "");
+        input.value = "";
+
+        var newli = document.createElement("li");
+        var newspan = document.createElement("span");
+        var newbutton = document.createElement("button");
+
+        newli.appendChild(newspan);
+        newli.appendChild(newbutton);
+
+        newspan.innerHTML = item;
+        newbutton.innerHTML = "delete";
+
+        list.appendChild(newli);
+        newbutton.onclick = function () {
+            list.removeChild(newli);
+        }
+
+        input.focus();
     }
+
 </script>
 </body>
 </html>
